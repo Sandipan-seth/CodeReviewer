@@ -16,6 +16,8 @@ export async function generateText(Prompt) {
           4. Performance Issues – e.g., unnecessary loops, unoptimized algorithms.
           5. Best Practices – e.g., unclear names (suggest better ones), missing comments, bad style per language norms.
           6. give a marks out of 10 for the code quality and performance.
+          7. give the markdown output with code blocks for any code changes and after converting the texts and fonts should be looking good
+
 
           How to Respond:
           - Be short, clear, and direct.

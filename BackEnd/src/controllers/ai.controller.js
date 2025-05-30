@@ -3,7 +3,6 @@ import { generateText } from '../services/ai.service.js';
 
 export default async function getResponse (req, res) {
     const { code } = req.body;
-    console.log("Received prompt:", code);
     if (!code) {
         return res.status(400).json({success:"failed", error: 'Prompt is required' });
     }
