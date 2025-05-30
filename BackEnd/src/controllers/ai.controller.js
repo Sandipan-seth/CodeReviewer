@@ -2,13 +2,13 @@ import { generateText } from '../services/ai.service.js';
 
 
 export default async function getResponse (req, res) {
-    const { prompt } = req.body;
-    console.log("Received prompt:", prompt);
-    if (!prompt) {
+    const { code } = req.body;
+    console.log("Received prompt:", code);
+    if (!code) {
         return res.status(400).json({success:"failed", error: 'Prompt is required' });
     }
-    
-    const newPrompt = `Generated text based on prompt in simple and short words: ${prompt}`;
+
+    const newPrompt = `${code}`;
     const response = await generateText(newPrompt);
     res.status(200).json({
         success: "success",
