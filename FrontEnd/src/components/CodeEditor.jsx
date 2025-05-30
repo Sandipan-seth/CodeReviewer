@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Prism from "prismjs";
 import axios from "axios";
-import Markdown from "react-markdown";
 
 import Editor from "react-simple-code-editor";
 import "prismjs/themes/prism.css";
@@ -43,9 +42,9 @@ const CodeEditor = () => {
       setLoader(true);
       setReview("Reviewing your code... Please wait.");
       const response = await axios.post(
-        "http://localhost:3000/api/ai/generate-text",
+        `${process.env.REACT_APP_BACKEND_URL}/api/ai/generate-text`,
         {
-          code: code
+          code: code,
         }
       );
 
