@@ -1,38 +1,32 @@
-# Fixing a Bug in the `sum` Function
+# 🧠 Code Reviewer with Gemini API
 
-You've defined a function named `sum` that subtracts `b` from `a` instead of adding them.
+This is a web application that allows users to select a programming language, paste their code, and receive an AI-powered review. The review includes error detection, suggestions for best practices, and code improvements — powered by the **Gemini API**.
 
-## ✅ Corrected Function
+## 🚀 Features
 
-```javascript
-function sum(a, b) {
-  return a + b;
-}
-```
+- 🌐 Language selection (e.g., JavaScript, Python, Java, etc.)
+- 🧾 Paste code and get an instant AI review
+- ❌ Identifies errors and bugs
+- ✅ Suggests improved and optimized code
+- 🛠️ Explains best coding practices
+- ⚡ Built with **React (frontend)** and **Node.js + Express (backend)**
+- 🔮 AI support via **Gemini API**
 
-## 🧠 Explanation of the Original Code's Behavior
+## 🖼️ Demo
 
-The original code:
+![Screenshot](./FrontEnd/public/screenshot.png)  
+*(Add a screenshot of your app here)*
 
-```javascript
-function sum(a, b) {
-  return a - b;
-}
-```
+## 🛠️ Tech Stack
 
-takes two arguments, `a` and `b`, and returns the result of `a - b` (a minus b), which is subtraction — not addition as the function name suggests.
+| Frontend     | Backend        | AI Engine   |
+|--------------|----------------|-------------|
+| React        | Node.js + Express | Gemini API |
 
-## 🚀 How to Use the Corrected Code
+## 📦 Installation
 
-```javascript
-function sum(a, b) {
-  return a + b;
-}
+### 1. Clone the Repository
 
-let result = sum(5, 3); // result will be 8 (5 + 3)
-console.log(result);
-```
-
-## 💡 Key Takeaway
-
-It's important to double-check your code, especially when dealing with basic mathematical operations like addition and subtraction, to ensure it behaves as intended. A small typo can lead to unexpected results.
+```bash
+git clone https://github.com/your-username/code-reviewer.git
+cd code-reviewer
