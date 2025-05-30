@@ -8,7 +8,7 @@ const CodeReview = () => {
 
   return (
     <div className="md:w-1/2 w-full p-6 flex flex-col">
-      <div className="bg-white p-6 rounded-lg shadow flex-1 overflow-y-auto border border-orange-400">
+      <div className="bg-white p-6 rounded-lg shadow flex-1 overflow-x-scroll border border-orange-400 ">
         <h2 className="text-xl font-semibold mb-4 text-orange-600">
           Review Output
         </h2>
