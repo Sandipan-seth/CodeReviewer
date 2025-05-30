@@ -23,7 +23,7 @@ const languageMap = {
   python: Prism.languages.python,
   c: Prism.languages.c,
   cpp: Prism.languages.cpp,
-  html: Prism.languages.markup, // use markup for html in prism
+  html: Prism.languages.markup,
   css: Prism.languages.css,
   json: Prism.languages.json,
 };
@@ -67,7 +67,7 @@ const CodeEditor = () => {
   }, [code, language]);
 
   return (
-    <div className="md:w-1/2 w-full p-6 border-b md:border-b-0 md:border-r border-gray-300 flex flex-col">
+    <div className="h-full md:w-1/2 w-full p-6 border-b md:border-b-0 md:border-r border-gray-300 flex flex-col">
       <div className="bg-white p-6 rounded-lg shadow flex-1 flex flex-col border border-orange-400">
         <h2 className="text-xl font-semibold mb-4">Code</h2>
 
@@ -93,32 +93,34 @@ const CodeEditor = () => {
           </select>
         </div>
 
-        <Editor
-          value={code}
-          onValueChange={(code) => setCode(code)}
-          highlight={(code) =>
-            Prism.highlight(
-              code,
-              languageMap[language] || Prism.languages.javascript,
-              language
-            )
-          }
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
-          padding={10}
-          className={`bg-zinc-200 rounded-md border ${
-            isFocused
-              ? "ring-2 ring-orange-500 border-orange-500"
-              : "border-orange-400"
-          } flex-1 transition-shadow font-mono text-sm sm:text-base`}
-          style={{
-            fontFamily: '"Fira Code", monospace',
-            fontSize: 16,
-            width: "100%",
-            height: "100%",
-            overflow: "auto",
-          }}
-        />
+        {/* ✅ Editor Container for Scrollable Area */}
+        <div className="flex-1 max-h-[60vh] overflow-y-auto rounded-md">
+          <Editor
+            value={code}
+            onValueChange={(code) => setCode(code)}
+            highlight={(code) =>
+              Prism.highlight(
+                code,
+                languageMap[language] || Prism.languages.javascript,
+                language
+              )
+            }
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            padding={10}
+            className={`bg-zinc-200 border ${
+              isFocused
+                ? "ring-2 ring-orange-500 border-orange-500"
+                : "border-orange-400"
+            } transition-shadow font-mono text-sm sm:text-base`}
+            style={{
+              fontFamily: '"Fira Code", monospace',
+              fontSize: 16,
+              width: "100%",
+              minHeight: "100%",
+            }}
+          />
+        </div>
 
         <button
           onClick={reviewCode}

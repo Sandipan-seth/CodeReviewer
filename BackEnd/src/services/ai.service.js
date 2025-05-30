@@ -16,7 +16,8 @@ export async function generateText(Prompt) {
           4. Performance Issues – e.g., unnecessary loops, unoptimized algorithms.
           5. Best Practices – e.g., unclear names (suggest better ones), missing comments, bad style per language norms.
           6. give a marks out of 10 for the code quality and performance.
-          7. give the markdown output with code blocks for any code changes and after converting the texts and fonts should be looking good
+          7. give the time and space complexity of the code.
+          8. give the markdown output with code blocks for any code changes and after converting the texts and fonts should be looking good
 
 
           How to Respond:
@@ -42,17 +43,11 @@ export async function generateText(Prompt) {
 
           Suggestions:
           - Split processData() into smaller functions.
-          - Replace 1000 with MAX_LIMIT = 1000.
           - Rename x to userCount for clarity.
           - Wrap async code in try/catch.
           - Use await before async fetch call.
 
-          MAX_LIMIT = 1000
-
-          def processData(data):
-              userCount = len(data)
-              if userCount > MAX_LIMIT:
-                  return "Too many users"
+          
           `,
   });
   const text = response.text;
