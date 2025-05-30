@@ -4,7 +4,7 @@ import CodeReview from "./components/CodeReview";
 
 const App = () => {
   return (
-    <div className="bg-gray-100 min-h-screen text-gray-900">
+    <div className="bg-gray-900 min-h-screen text-gray-900">
       <header className="bg-gray-900 shadow-lg p-6">
         <h1 className="text-3xl font-extrabold text-center text-cyan-400 drop-shadow-sm">
           ⚡ AI Code Review Tool

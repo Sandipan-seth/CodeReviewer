@@ -91,7 +91,7 @@ const CodeEditor = () => {
           </select>
         </div>
 
-        <div className="flex-1 max-h-[60vh] overflow-y-auto rounded-md">
+        <div className="flex-1 max-h-[55vh] overflow-y-auto rounded-md">
           <Editor
             value={code}
             onValueChange={(code) => setCode(code)}
