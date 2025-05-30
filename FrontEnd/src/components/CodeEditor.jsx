@@ -42,7 +42,7 @@ const CodeEditor = () => {
       setLoader(true);
       setReview("Reviewing your code... Please wait.");
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/ai/generate-text`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/ai/generate-text`,
         {
           code: code,
         }
