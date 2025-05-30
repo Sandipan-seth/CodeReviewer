@@ -9,6 +9,7 @@ This is a web application that allows users to select a programming language, pa
 - ❌ Identifies errors and bugs
 - ✅ Suggests improved and optimized code
 - 🛠️ Explains best coding practices
+- 🎨 Syntax highlighting for pasted code
 - ⚡ Built with **React (frontend)** and **Node.js + Express (backend)**
 - 🔮 AI support via **Gemini API**
 
@@ -47,4 +48,9 @@ npm start
 ### 3. .env file in BackEnd
 ```bash
 GOOGLE_GEMINI_KEY= your api key
+```
+
+### 4. .env file in FrontEnd
+```bash
+VITE_BACKEND_URL= your backend URL
 ```
