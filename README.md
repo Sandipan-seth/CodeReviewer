@@ -14,8 +14,7 @@ This is a web application that allows users to select a programming language, pa
 
 ## 🖼️ Demo
 
-![Screenshot](./FrontEnd/public/screenshot.png)  
-*(Add a screenshot of your app here)*
+<img src="./FrontEnd/public/screenshot.png">
 
 ## 🛠️ Tech Stack
 
@@ -28,5 +27,24 @@ This is a web application that allows users to select a programming language, pa
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/code-reviewer.git
+git clone https://github.com/Sandipan-seth/CodeReviewer
 cd code-reviewer
+```
+
+### 2. Install Dependences
+open two Terminal
+```bash
+cd FrontEnd
+npm install 
+npm run dev
+```
+```bash
+cd BackEnd
+npm install 
+npm start
+```
+
+### 3. .env file in BackEnd
+```bash
+GOOGLE_GEMINI_KEY= your api key
+```
